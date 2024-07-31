@@ -4,5 +4,7 @@ if a > 2:
 
 b = 4
 
+c = 77
+
 
 #bdsdfdsfsfs
