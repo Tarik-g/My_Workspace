@@ -5,7 +5,6 @@ def bspfunktion():
 def gruss(name, gruss):
     print("Hallo %s , ich wünsche dir %s" %(name, gruss))
 
-
 def summe(a,b):
     return a +b
 

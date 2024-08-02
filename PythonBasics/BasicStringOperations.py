@@ -13,13 +13,8 @@ print(name[::-1])
 
 astring = "Heloworld!"
 print(astring[3:8:2])
-
-
 print(astring.upper())
 print(astring.lower())
-
-
 print(name.startswith("tar"))
 print(name.endswith("lol"))
-
 print(name.split("t"))

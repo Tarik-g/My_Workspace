@@ -1,11 +1,8 @@
 telefonbuch = {}
 
 telefonbuch["tarik"] = 176
-
 telefonbuch["far"] = 190
-
 telefonbuch["mart"] = 154
-
 telefonbuch["rar"] = 134
 
 print(telefonbuch)
@@ -23,10 +20,8 @@ telefonbuch = {
     "meh" : 231432,
     "joh" :23742347
 }
-
 print(telefonbuch)
 
 del telefonbuch["meh"]
 telefonbuch.pop("joh")
 print(telefonbuch)
-

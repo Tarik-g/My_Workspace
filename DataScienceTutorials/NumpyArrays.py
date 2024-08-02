@@ -1,4 +1,5 @@
 import numpy as np
+
 #print(np.__version__)
 
 height = [1.87,  1.87, 1.82, 1.91, 1.90, 1.85]
@@ -12,10 +13,7 @@ print(type(np_weight))
 
 # Calculate bmi
 bmi = np_weight / np_height ** 2
-
 # Print the result
 print(bmi)
-
 #bmi > 23
-
 print(bmi[bmi < 25])
