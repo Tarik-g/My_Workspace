@@ -10,14 +10,14 @@ class Hund:
         return self.alter
 
 
-Bello = Hund("Bello", 5)
-Celo = Hund("Celo", 4)
-if Bello.alter == 5:
+bello = Hund("Bello", 5)
+celo = Hund("Celo", 4)
+if bello.alter == 5:
     print("yess")
 
-Bello.alter = 3
-print(Bello.alter)
-print(Celo.alter)
-print(Bello.getalter())
+bello.alter = 3
+print(bello.alter)
+print(celo.alter)
+print(bello.getalter())
 
-Bello.bellen()
+bello.bellen()

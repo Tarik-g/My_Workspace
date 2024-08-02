@@ -1,9 +1,9 @@
-meineliste = []
-meineliste.append(1)
-meineliste.append(2)
-meineliste.append(3)
+meine_liste = []
+meine_liste.append(1)
+meine_liste.append(2)
+meine_liste.append(3)
 
-print(meineliste[0])
+print(meine_liste[0])
 
-for x in meineliste:
+for x in meine_liste:
     print(x)

@@ -1,24 +1,25 @@
-import Functions
-from Functions import summe
-from Functions import summe as addieren
+from PythonBasics import examplepackage
+import functions
+from functions import summe
+from functions import summe as addieren
 
 #alles importieren mit namespace
-from Functions import *
+from functions import *
 
-print(Functions.summe(3,4))
+print(functions.summe(3,4))
 print(summe(3,4))
 print(addieren(3,4))
 
-import expPackage.expimport
-print(expPackage.expimport.substract(10, 5))
+#import PythonBasics.examplepackage.expample_import1
+print(examplepackage.expample_import1.substract(10, 5))
 
-from expPackage import expimport
-print(expimport.substract(15, 5))
+from PythonBasics.examplepackage import expample_import1
+print(expample_import1.substract(15, 5))
 
 #import sys
 #print(sys.path)
 
-#dir(Functions)
+#dir(functions)
 #help
 
 #sys.path.append('/path/to/your/modules')

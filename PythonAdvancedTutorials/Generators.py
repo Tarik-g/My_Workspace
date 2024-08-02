@@ -1,13 +1,13 @@
 import random
 
-def drei_zufalls_Zahlen():
+def drei_zufalls_zahlen():
     for i in range(2):
         yield random.randint(1,100)
     
     yield random.randint(1,1000)
 
-for zufalls_zahl in drei_zufalls_Zahlen():
-    print("Und die nächste zahl %d" % zufalls_zahl)
+for zufalls_zahl in drei_zufalls_zahlen():
+    print("Und die nächste Zahl %d" % zufalls_zahl)
 
 def fib():
     a,b = 1,1

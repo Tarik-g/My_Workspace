@@ -1,4 +1,4 @@
-def bspfunktion():
+def bsp_funktion():
     print ("maschine")
     return 3+4
 

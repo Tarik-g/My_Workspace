@@ -9,8 +9,8 @@ print(rest)
 exponential = 2**4
 print(exponential)
 
-vielehi = "hi" * 10
-print(vielehi)
+viele_hi = "hi" * 10
+print(viele_hi)
 
 even_numbers = [2,4,6,8]
 odd_numbers = [1,3,5,7]
