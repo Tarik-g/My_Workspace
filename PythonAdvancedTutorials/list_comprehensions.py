@@ -2,10 +2,8 @@
 list_comprehensions
 ============
 
-Python basic Tutorial from https://www.learnpython.org/
-Lesson 1 about Hello World
-
-Extended description of the module, its purpose, and any important details. This section is optional.
+Python Advanced Tutorial from https://www.learnpython.org/
+Lesson 2 about List Comprehensions
 
 Author:
     Tarik Gökmen (tarikgokmen1999@gmail.com)
@@ -15,36 +13,8 @@ Version:
 
 Date:
     2024-08-03
-
-Functions:
-    function1(param1, param2): Description of function1
-    function2(param1, param2): Description of function2
-
-Classes:
-    ClassName: Description of ClassName
 """
 
- """
-    Brief summary of the function.
-
-    Extended description of the function, its purpose, and behavior. This section is optional.
-
-    Parameters:
-    param1 (int): Description of param1
-    param2 (str): Description of param2
-
-    Returns:
-    bool: Description of the return value
-
-    Raises:
-    ValueError: Description of the circumstances under which this exception is raised
-
-    Author:
-        Tarik Gökmen (tarikgokmen1999@gmail.com)
-
-    Version:
-        1.0.0
-
-    Date:
-        2024-08-03
-    """
+numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+new_list = [int(number) for number in numbers if number > 0]
+print(new_list)
