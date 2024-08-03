@@ -1,3 +1,20 @@
+"""
+conditions
+============
+
+Python basic Tutorial from https://www.learnpython.org/
+Lesson 7 about Conditions
+
+Author:
+    Tarik Gökmen (tarikgokmen1999@gmail.com)
+
+Version:
+    1.0.0
+
+Date:
+    2024-08-03
+"""
+
 x = 4
 print(x!=3)
 print(x==4)

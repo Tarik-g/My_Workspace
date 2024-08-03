@@ -1,3 +1,20 @@
+"""
+pandas_basics
+============
+
+Python Data Science Tutorial from https://www.learnpython.org/
+Lesson 2 about Pandas Basics
+
+Author:
+    Tarik Gökmen (tarikgokmen1999@gmail.com)
+
+Version:
+    1.0.0
+
+Date:
+    2024-08-03
+"""
+
 import pandas as pd
 
 dict = {"country": ["Brazil", "Russia", "India", "China", "South Africa"],

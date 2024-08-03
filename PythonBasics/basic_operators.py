@@ -1,3 +1,20 @@
+"""
+basic_operators
+============
+
+Python basic Tutorial from https://www.learnpython.org/
+Lesson 4 about Basic Operators
+
+Author:
+    Tarik Gökmen (tarikgokmen1999@gmail.com)
+
+Version:
+    1.0.0
+
+Date:
+    2024-08-03
+"""
+
 print(5+1)
 print(5*2)
 print(10/5)

@@ -1,5 +1,5 @@
 """
-example_import2
+example_import1
 ============
 
 Python basic Tutorial from https://www.learnpython.org/
@@ -15,15 +15,19 @@ Date:
     2024-08-03
 
 Functions:
-    function2(): returns the string "Function 2"
+    substract(a, b): returns the diffrence between two numbers
 """
 
-def function2():
+def substract(a,b):
     """
-    returns the string "Function 2"
+    Returns the diffrence between two numbers
+
+    Parameters:
+    a (int): first number of the subtraction
+    b (int): second number of the subtraction
 
     Returns:
-    str: "Function 2"
+    int: diffrence of a and b
 
     Author:
         Tarik Gökmen (tarikgokmen1999@gmail.com)
@@ -34,4 +38,4 @@ def function2():
     Date:
         2024-08-03
     """
-    return "Function 2"
+    return a-b

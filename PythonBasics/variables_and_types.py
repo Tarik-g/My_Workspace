@@ -1,3 +1,20 @@
+"""
+variables_and_types
+============
+
+Python basic Tutorial from https://www.learnpython.org/
+Lesson 2 about Variables and Types
+
+Author:
+    Tarik Gökmen (tarikgokmen1999@gmail.com)
+
+Version:
+    1.0.0
+
+Date:
+    2024-08-03
+"""
+
 number = 4
 print(number)
 

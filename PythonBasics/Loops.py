@@ -1,3 +1,20 @@
+"""
+loops
+============
+
+Python basic Tutorial from https://www.learnpython.org/
+Lesson 8 about Loops
+
+Author:
+    Tarik Gökmen (tarikgokmen1999@gmail.com)
+
+Version:
+    1.0.0
+
+Date:
+    2024-08-03
+"""
+
 primzahlen = [ 2, 3, 5, 7, 11, 13, 17]
 
 for primzahl in primzahlen:
