@@ -15,6 +15,9 @@ Date:
     2024-08-03
 """
 
+x = int(input("Enter a number: "))
+print("You have entered: % d" % x)
+
 number = 4
 print(number)
 
