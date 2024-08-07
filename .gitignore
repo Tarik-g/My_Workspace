@@ -6,3 +6,5 @@ autogptchat/gs.bat
 autogptchat/gs.sh
 autogptchat/chat.bat
 autogptchat/chat.sh
+
+pdfmerger/*.pdf
