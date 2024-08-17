@@ -1,9 +1,17 @@
 """
-sets
+ds_set
 ============
 
-Python Advanced Tutorial from https://www.learnpython.org/
-Lesson 7 about Sets
+Sets are like lists but unordered, mutable, iterable and allow only
+unique elements.
+
+Indexing is not possible.
+
+Use to remove duplicates, for membership testing, to use mathematical
+operations.
+
+Dont use when order matters, element mutability is needed or you need
+key-value pairing.
 
 Author:
     Tarik Gökmen (tarikgokmen1999@gmail.com)
@@ -12,7 +20,18 @@ Version:
     1.0.0
 
 Date:
-    2024-08-04
+    2024-08-17
+
+License:
+    MIT License
+
+Change Log:
+    Version 1.0.0 (2024-08-17):
+        Initial release
+
+Contact Information:
+    For issues, contact Tarik Gökmen at tarikgokmen1999@gmail.com or
+    visit https://github.com/Tarik-g
 """
 
 print(set("my name is Tarik and Tarik is my name".split()))

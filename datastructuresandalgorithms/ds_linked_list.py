@@ -1,5 +1,5 @@
 """
-ds_linked-lists
+ds_linked-list
 ============
 
 Linked lists are ideal for frequently using deletes and insertions and

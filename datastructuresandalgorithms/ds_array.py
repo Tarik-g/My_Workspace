@@ -1,5 +1,5 @@
 """
-ds_arrays
+ds_array
 ============
 
 Arrays are ideal for fast access by index and if the size is known and

@@ -1,8 +1,18 @@
 """
-lists
+list
 ============
 
-Lists in python are dynamic arrays
+Lists in python are dynamic arrays that are easy to use, felxible,
+dynamic, good for mixed data and indexing.
+
+Dont use when large data is given. It can also be bad for fixed type
+operations and can be slow.
+
+There are several in built functions that are useful like map, filter,
+reduce and so on.
+
+List comprehensions are powerful one liners.
+
 Author:
     Tarik Gökmen (tarikgokmen1999@gmail.com)
 
@@ -10,8 +20,9 @@ Version:
     1.0.0
 
 Date:
-    2024-08-03
+    2024-08-017
 """
+
 
 meine_liste = []
 meine_liste.append(1)
@@ -23,44 +34,12 @@ print(meine_liste[0])
 for x in meine_liste:
     print(x)
 
-    """
-list_comprehensions
-============
-
-Python Advanced Tutorial from https://www.learnpython.org/
-Lesson 2 about List Comprehensions
-
-Author:
-    Tarik Gökmen (tarikgokmen1999@gmail.com)
-
-Version:
-    1.0.0
-
-Date:
-    2024-08-03
-"""
-
+# list comprehension
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 new_list = [int(number) for number in numbers if number > 0]
 print(new_list)
 
-"""
-map_filter_reduce
-============
-
-Python Advanced Tutorial from https://www.learnpython.org/
-Lesson 13 about Map, Filter and Reduce
-
-Author:
-    Tarik Gökmen (tarikgokmen1999@gmail.com)
-
-Version:
-    1.0.0
-
-Date:
-    2024-08-05
-"""
-
+# map, filter, reduce
 namen = ["tee", "joo"]
 print(list(map(str.upper, namen)))
 
