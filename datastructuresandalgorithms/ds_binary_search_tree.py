@@ -1,3 +1,5 @@
+# Todo add docstrings
+
 class AlreadyExistsError(Exception):
     pass
 
@@ -72,65 +74,124 @@ class BinarySearchTree():
         self.nodes.append(new_node)
         
     def remove_node(self, data):
-        current_node = self.root_node
-        parent = None
-
-        if current_node is None:
-            raise ValueError("The tree is empty")
-
-        if current_node.get_data() == data:
-            raise RootError("The root can't be removed")
-
-        while current_node:
-            if data == current_node.get_data():
-                left_child = current_node.get_left_child()
-                right_child = current_node.get_right_child()
-
-                # Case 1: Node has two children
-                if left_child and right_child:
-                    parent.set_left_child(left_child)
-                    parent.set_right_child(right_child)
-                    left_child.set_parent(parent)
-                    right_child.set_parent(parent)
-
-                # Case 2: Node has only one child (left)
-                elif left_child:
-                    if parent.get_left_child() == current_node:
-                        parent.set_left_child(left_child)
-                    else:
-                        parent.set_right_child(left_child)
-                    left_child.set_parent(parent)
-
-                # Case 3: Node has only one child (right)
-                elif right_child:
-                    if parent.get_left_child() == current_node:
-                        parent.set_left_child(right_child)
-                    else:
-                        parent.set_right_child(right_child)
-                    right_child.set_parent(parent)
-
-                # Case 4: Node has no children
-                else:
-                    if parent.get_left_child() == current_node:
-                        parent.set_left_child(None)
-                    else:
-                        parent.set_right_child(None)
-
-                return
-
-            # Update parent and current node pointers
-            parent = current_node
-            if data < current_node.get_data():
-                current_node = current_node.get_left_child()
-            else:
-                current_node = current_node.get_right_child()
-
-        raise ValueError("Node with data not found")
-
+        if data == self.root_node.get_data():
+            raise RootError("The root cant be removed")
         
+        node_to_remove = self.search(data)
+        if node_to_remove == None:
+            return None
+        
+        
+        right = node_to_remove.get_right_child()
+        left = node_to_remove.get_left_child()
+        parent = node_to_remove.get_parent()
+
+        # leaf node
+        if right is None and left is None:
+            if node_to_remove.get_data() > parent.get_data():
+                parent.set_right_child(None)
+            else:
+                parent.set_left_child(None)
+            node_to_remove.set_parent(None)
+        # only left child
+        elif right is None:
+            node_to_remove.set_parent(None)
+            node_to_remove.set_left_child(None)
+            parent.set_left_child(left)
+            left.set_parent(parent)
+        # only right child
+        elif left is None:
+            node_to_remove.set_parent(None)
+            node_to_remove.set_right_child(None)
+            parent.set_right_child(right)
+            right.set_parent(parent)
+        # Two children
+        else:
+            successor = right
+            while successor.get_left_child() is not None:
+                successor = successor.get_left_child()
+
+            # If successor is not the immediate right child
+            if successor != right:
+                successor_parent = successor.get_parent()
+                successor_right_child = successor.get_right_child()
+
+                successor_parent.set_left_child(successor_right_child)
+                if successor_right_child is not None:
+                    successor_right_child.set_parent(successor_parent)
+
+                successor.set_right_child(right)
+                right.set_parent(successor)
+
+            if node_to_remove.get_data() > parent.get_data():
+                parent.set_right_child(successor)
+            else:
+                parent.set_left_child(successor)
+
+            successor.set_left_child(left)
+            left.set_parent(successor)
+            successor.set_parent(parent)
+            node_to_remove.set_parent(None)
+            node_to_remove.set_right_child(None)
+            node_to_remove.set_left_child(None)
+        return node_to_remove
 
     def traversal():
-        # depends on the tree type (if it has duplicates etc)
         pass
 
-    
+    def in_order(self, node):
+        if node:
+            self.in_order(node.get_left_child())
+            print(node.get_data(), end=' ')
+            self.in_order(node.get_right_child())
+
+    def pre_order(self, node):
+        if node:
+            print(node.get_data(), end=' ')
+            self.pre_order(node.get_left_child())
+            self.pre_order(node.get_right_child())
+
+    def post_order(self, node):
+        if node:
+            self.post_order(node.get_left_child())
+            self.post_order(node.get_right_child())
+            print(node.get_data(), end=' ')
+
+    def level_order(self, root):
+        if root is None:
+            return
+        queue = [root]
+        while queue:
+            current_node = queue.pop(0)
+            print(current_node.get_data(), end=' ')
+            if current_node.get_left_child():
+                queue.append(current_node.get_left_child())
+            if current_node.get_right_child():
+                queue.append(current_node.get_right_child())
+
+    def reverse_in_order(self, node):
+        if node:
+            self.reverse_in_order(node.get_right_child())
+            print(node.get_data(), end=' ')
+            self.reverse_in_order(node.get_left_child())
+
+
+exp_bst = BinarySearchTree(10)
+
+exp_bst.add_node(5)
+exp_bst.add_node(1)
+exp_bst.add_node(20)
+exp_bst.add_node(55)
+exp_bst.add_node(34)
+exp_bst.add_node(7)
+exp_bst.add_node(4)
+
+exp_bst.in_order(exp_bst.root_node)
+print("--------------")
+exp_bst.pre_order(exp_bst.root_node)
+print("--------------")
+exp_bst.post_order(exp_bst.root_node)
+print("--------------")
+exp_bst.reverse_in_order(exp_bst.root_node)
+print("--------------")
+exp_bst.level_order(exp_bst.root_node)
