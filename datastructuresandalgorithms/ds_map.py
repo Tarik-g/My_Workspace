@@ -15,6 +15,10 @@ Date:
     2024-08-03
 """
 
+# maps are dictionaries in Python
+
+# hashing describes the assiggnment of keys to the values
+
 telefonbuch = {}
 
 telefonbuch["tarik"] = 176
