@@ -1,20 +1,3 @@
-"""
-dictionaries
-============
-
-Python basic Tutorial from https://www.learnpython.org/
-Lesson 11 about dictionaries
-
-Author:
-    Tarik Gökmen (tarikgokmen1999@gmail.com)
-
-Version:
-    1.0.0
-
-Date:
-    2024-08-03
-"""
-
 # maps are dictionaries in Python
 
 # hashing describes the assiggnment of keys to the values

@@ -1,5 +1,5 @@
 """
-ds_set
+set
 ============
 
 Sets are like lists but unordered, mutable, iterable and allow only

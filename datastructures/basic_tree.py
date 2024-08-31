@@ -1,5 +1,5 @@
 """
-ds_basic_tree
+basic_tree
 ============
 
 Trees are hierarchial data representation

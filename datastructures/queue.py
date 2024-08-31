@@ -1,5 +1,5 @@
 """
-ds_queue
+queue
 ============
 
 Queues are dynamic like list, but when you get an item its the first one

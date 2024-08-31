@@ -1,5 +1,5 @@
 """
-ds_stack
+stack
 ============
 
 Stacks are dynamic like list, but when you get an item its the last one
